@@ -35,9 +35,14 @@ header {
    width: 100%;
    background: #161415 no-repeat top center;
    background-size: cover !important;
-	-webkit-background-size: cover !important;
+   -webkit-background-size: cover !important;
    text-align: center;
    overflow: hidden;
+/* Remove the extra closing curly brace */
+}
+
+header .responsive-headline {
+   font-size: 8px; /* İstediğiniz boyutu buraya yazın */
 }
 
 /* vertically center banner section */
@@ -328,7 +333,8 @@ ul#nav li.current a { color: #F06000; }
 .photoshop {
   	width: 60%;
   	-moz-animation: photoshop 2s ease;
-  	-webkit-animation: photoshop 2s ease;
+   animation: photoshop 2s ease;
+   -webkit-animation: photoshop 2s ease;
 }
 .illustrator {
   	width: 55%;
