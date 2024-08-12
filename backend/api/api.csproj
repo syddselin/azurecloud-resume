@@ -4,6 +4,8 @@
     <AzureFunctionsVersion>v4</AzureFunctionsVersion>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.CosmosDB" Version="4.10.0" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.CosmosDB" Version="3.0.9" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.4.0" />
   </ItemGroup>
   <ItemGroup>
