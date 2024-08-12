@@ -1,20 +1,28 @@
-window.addEventListener('DOMContentLoaded', (event) =>{
+window.addEventListener('DOMContentLoaded', () => {
     getVisitCount();
-})
+});
 
-const productionApiUrl = 'https://azureresumevisitorcounter.azurewebsites.net/api/GetVisitorCounter?';
-const localApiUrl = 'http://localhost:7071/api/GetVisitorCounter';
+const functionApi = 'http://localhost:7071/api/GetResumeCounter';
 
 const getVisitCount = () => {
-    let count = 30;
-    fetch(productionApiUrl).then(response => {
-        return response.json()
-    }).then(response =>{
-        console.log("Website called function API.");
-        count =  response.count;
-        document.getElementById("counter").innerText = count;
-    }).catch(function(error){
-        console.log(error);
-    });
-    return count;
+    fetch(functionApi)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then(response => {
+            console.log("Website called function API.");
+            const count = response.Count; // Değişiklik burada
+            const counterElement = document.getElementById("counter");
+            if (counterElement) {
+                counterElement.innerText = count;
+            } else {
+                console.log("Element with ID 'counter' not found");
+            }
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
 }
