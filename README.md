@@ -25,31 +25,3 @@ The architecture consists of an Azure Storage account hosting the static website
 You can view the live demo of the project by visiting the following URL:
 
 [Cloud Resume Project](https://scfunction.z16.web.core.windows.net/)
-
-## Getting Started
-
-If you wish to clone and run this project locally, follow these steps:
-
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/cloud-resume.git
-    ```
-
-2. Navigate to the project directory:
-    ```bash
-    cd cloud-resume
-    ```
-
-3. Deploy the API:
-    - Follow the instructions in the `api/` folder to deploy the Azure Function.
-
-4. Update the frontend to point to your deployed API.
-
-5. Serve the frontend:
-    - You can use a simple HTTP server to serve the frontend files locally.
-
-6. Visit your local server to see the project in action.
-
-## Contributing
-
-If you want to contribute to this project, feel free to open a pull request or submit an issue.
