@@ -1,15 +1,55 @@
-# Project Description
-The Cloud Resume project is a static website hosted on Azure Storage, with a visitor counter built on Azure Functions. The website is built with HTML, CSS, and JavaScript. The visitor counter is built with .NET and Azure Functions.
+# Cloud Resume Project
 
+The Cloud Resume project is a static website hosted on Azure Storage, featuring a visitor counter built on Azure Functions. The website is developed using HTML, CSS, and JavaScript, while the visitor counter is powered by .NET and Azure Functions.
 
-# Project Structure
+## Project Structure
 
-- `frontend/`: Folder contains the website.
-    - `main.js`: Folder contains visitor counter code.
-- `api/`: Folder contains the dotnet API deployed on Azure Functions.
-    - `Counter.cs`: Contains the visitor counter code.
-- `.github/workflows/`: Folder contains CI/CD workflow configurations.
-- `.devcontainer`: Folder contains the my container configuration for VS Code.
+- `frontend/`: This folder contains the website's frontend files.
+    - `index.html`: The main HTML file for the website.
+    - `styles.css`: The CSS file for styling the website.
+    - `main.js`: Contains the JavaScript code, including the visitor counter logic.
+- `api/`: This folder contains the .NET API deployed on Azure Functions.
+    - `Counter.cs`: The C# file containing the visitor counter code.
+- `.github/workflows/`: This folder contains CI/CD workflow configurations.
+    - `deploy.yml`: Configuration file for automating deployments.
+- `.devcontainer/`: This folder contains the configuration for the development container used in VS Code.
+
+## Architecture Overview
 
 ![architecture](architecture.png)
 
+The architecture consists of an Azure Storage account hosting the static website and an Azure Function that handles the visitor counter. The visitor count is updated each time the website is accessed, ensuring real-time tracking of visits.
+
+## Live Demo
+
+You can view the live demo of the project by visiting the following URL:
+
+[Cloud Resume Project](https://scfunction.z16.web.core.windows.net/)
+
+## Getting Started
+
+If you wish to clone and run this project locally, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/cloud-resume.git
+    ```
+
+2. Navigate to the project directory:
+    ```bash
+    cd cloud-resume
+    ```
+
+3. Deploy the API:
+    - Follow the instructions in the `api/` folder to deploy the Azure Function.
+
+4. Update the frontend to point to your deployed API.
+
+5. Serve the frontend:
+    - You can use a simple HTTP server to serve the frontend files locally.
+
+6. Visit your local server to see the project in action.
+
+## Contributing
+
+If you want to contribute to this project, feel free to open a pull request or submit an issue.
