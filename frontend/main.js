@@ -2,7 +2,11 @@ window.addEventListener('DOMContentLoaded', () => {
     getVisitCount();
 });
 
-const functionApi = 'http://localhost:7071/api/GetResumeCounter';
+
+const localFunctionAPi = 'http://localhost:7071/api/GetResumeCounter';
+
+// Çevresel değişkenleri tarayıcıda kullanmak için bir yöntem
+const functionApiUrl = window.FUNCTION_API_URL || localFunctionAPi; 
 
 const getVisitCount = () => {
     fetch(functionApi)
